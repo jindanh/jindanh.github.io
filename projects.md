@@ -1,9 +1,9 @@
 ---
-layout: default
-title: Home
+layout: page
+title: Projects
 ---
 
-<!-- <div class="posts">
+<div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
@@ -17,22 +17,9 @@ title: Home
     {{ post.content }}
   </div>
   {% endfor %}
-</div> -->
-
-<div>
-  {% for post in paginator.posts %}
-  {% if post.title == "About" %}
-    <div class="post">
-      <h1 class="post-title">
-        <a href="{{ post.url }}">
-          {{ post.title }}
-        </a>
-      </h1>
-      {{ post.content }}
-    </div>
 </div>
 
-<!-- <div class="pagination">
+<div class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
   {% else %}
@@ -47,4 +34,4 @@ title: Home
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
-</div> -->
+</div>
