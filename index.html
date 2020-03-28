@@ -1,85 +1,148 @@
----
-layout: default
-title: Home
----
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jindan Huang's Website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Jindan Huang</h1>
+				<nav>
+					<ul>
+						<li><a href="#intro">Home</a></li>
+						<li><a href="#one">About Me</a></li>
+						<!-- <li><a href="#two"></a></li> -->
+						<li><a href="#publications">Publications</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Home -->
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content">
+					<header>
+						<h2>Jindan Huang</h2>
+					</header>
+					<p>Graduate Student | Computer Science | Johns Hopkins University</p>
+					<p>
+					<footer>
+						<a href="#one" class="button style2 down">More</a>
+					</footer>
+				</div>
+			</section>
 
 
-<div class="posts">
-  <!-- Pined posts -->
-  {% if paginator.page == 1 %}
-    {% for post in site.posts %}
-      {% if post.pined %}
-        {% if post.lang %}
-        <div class="post" lang="{{post.lang}}">
-        {% else %}
-        <div class="post">
-        {% endif %}
-          <h1 class="post-title"><i class="em em-round_pushpin"></i>&nbsp;<a href="{{ post.url }}">{{ post.title }}</a></h1>
+		<!-- About Me -->
+			<section id="one" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>About Me</h2>
+					</header>
+					<p>I am Jindan Huang, a Computer Science Master's student at Johns Hopkins University, advised by <a href="https://www.cs.jhu.edu/faculty/chien-ming-huang">Dr. Chien-Ming Huang</a> and <a href="https://www.cs.jhu.edu/faculty/russell-h-taylor">Dr. Russell H. Taylor</a>. I am a member of <a href="http://intuitivecomputing.jhu.edu/">Intuitive Computing Laboratory</a>.</p> 
+					<p>My research interests are Human-Computer Interation and Human-Robot Interaction, especially their applications in biomedical fields.</p>
+					<p>Previously, I obtained my Bachelor's degree in Management Information Systems at China Pharmaceutical University.</p>
+				</div>
+				<a href="#work" class="button style2 down anchored">Next</a>
+			</section>
 
-          <span class="post-tags">
-            [&nbsp;
-            {% for tag in post.tags %}
-              {% capture tag_name %}{{ tag }}{% endcapture %}
-              <a class="no-underline" href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>    
-            {% endfor %}
-            ]
-          </span>
-
-          <span class="post-date">{{ post.date | date_to_string }}</span>
-
-          {{ post.content }}
-        </div>
-        <hr>
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-
-  <!-- Normal posts listed in the order of time -->
-
-  {% for post in paginator.posts %}
-  {% if post.lang %}
-  <div class="post" lang="{{post.lang}}">
-  {% else %}
-  <div class="post">
-  {% endif %}
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-tags">
-      [&nbsp;
-      {% for tag in post.tags %}
-        {% capture tag_name %}{{ tag }}{% endcapture %}
-        <a class="no-underline" href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>    
-      {% endfor %}
-      ]
-    </span>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
-  </div>
-  <hr>
-  {% endfor %}
-</div>
+		<!-- Two -->
+			<!-- <section id="two" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2></h2>
+					</header>
+					<p></p>
+				</div>
+				<a href="#work" class="button style2 down anchored">Next</a>
+			</section> -->
 
 
-<!-- Pagination -->
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+		<!-- Publications -->
+			<section id="publications" class="main style3 primary">
+				<div class="content">
+					<header>
+						<h2>Publications</h2>
+					</header>
+					<ul style="list-style-type:disc;">
+						<li>
+							<p style="text-align:left;">
+							Liu, X., Stiber, M., <b>Huang, J.</b>, Ishii, M., Hager, G.D., Taylor, R.H., & Unberath, M. (2020). Reconstructing Sinus Anatomy from Endoscopic Video - Towards a Radiation-free Approach for Quantitative Longitudinal Assessment. ArXiv, abs/2003.08502.(Submitted to MICCAI'20) <a href="papers/liu2020miccai.pdf">[PDF]</a></p>
+						</li>
+					</ul>
+					<!-- Gallery  -->
+						<!-- <div class="gallery">
+							<article class="from-left">
+								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
+							</article>
+						</div> -->
+
+				</div>
+			</section>
+
+
+		<!-- Contact -->
+			<section id="contact" class="main style3 secondary">
+				<div class="content">
+					<header>
+						<h2>Say Hello.</h2>
+						<p>jhuan128 [at] jhu [dot] edu</p>
+					</header>
+					<!-- <div class="box">
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
+								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
+								<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+							</div>
+							<ul class="actions special">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form>
+					</div> -->
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+
+				<!-- Icons -->
+					<ul class="icons">
+						<li><a href="mailto:jhuan128@jhu.edu" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://github.com/melody8282" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/jindan-huang" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					</ul>
+
+				<!-- Menu -->
+					<ul class="menu">
+						<li>&copy; 2020. Jindan Huang. All rights reserved.</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
